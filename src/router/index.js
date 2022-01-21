@@ -1,10 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Home from '@/views/Home'
+import Message from '@/views/Message'
 
 Vue.use(VueRouter)
 
 const routes = [
-
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+  },
+  {
+    path: '/message',
+    name: 'message',
+    component: Message,
+  }
 ]
 
 const router = new VueRouter({
