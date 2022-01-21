@@ -1,11 +1,18 @@
 <template>
     <div>
-        <header class="header">
-            <h1>検索</h1>
-        </header>
+        <Header/>
+        <main></main>
+        <GlobalNav/>
     </div>
 </template>
 
 <script>
-
+import GlobalNav from '@/components/GlobalNav'
+import Header from '@/components/Header'
+export default{
+        components: {
+        Header,
+        GlobalNav
+    },
+}
 </script>

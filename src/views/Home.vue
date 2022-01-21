@@ -42,16 +42,19 @@
                 <PaybackHistory/>
             </div>
         </main>
+        <GlobalNav/>
     </div>
 </template>
 
 <script>
+import GlobalNav from '@/components/GlobalNav'
 import Header from '@/components/Header'
 import PaybackHistory from '@/components/PayBackHistory'
 export default {
     components: {
         PaybackHistory,
         Header,
+        GlobalNav
     },
 }
 </script>
