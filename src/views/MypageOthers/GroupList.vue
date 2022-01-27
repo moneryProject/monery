@@ -7,9 +7,9 @@
                     <p>92</p>
                     <p>友達</p>
                 </div>
-                <div class="groupList__stats__box center">
+                <div class="groupList__stats__box center selected">
                     <p>10</p>
-                    <p>グループ</p>
+                    <p class="selected__txt">グループ</p>
                 </div>
                 <div class="groupList__stats__box">
                     <p>22</p>
@@ -19,19 +19,19 @@
             <div class="groupList__list">
                 <div class="groupList__list__user">
                     <div class="icon"></div>
-                    <p class="name">東江楓音</p>
+                    <p class="name">福岡同好会&emsp;(10)</p>
                 </div>
                 <div class="groupList__list__user">
                     <div class="icon"></div>
-                    <p class="name">石丸ひろき</p>
+                    <p class="name">福岡同好会&emsp;(10)</p>
                 </div>
                 <div class="groupList__list__user">
                     <div class="icon"></div>
-                    <p class="name">木田拓哉</p>
+                    <p class="name">福岡同好会&emsp;(10)</p>
                 </div>
                 <div class="groupList__list__user">
                     <div class="icon"></div>
-                    <p class="name">ままっままm</p>
+                    <p class="name">福岡同好会&emsp;(10)</p>
                 </div>
             </div>
         </main>
@@ -64,6 +64,23 @@ export default {
             width: 100%;
             height: 6.0rem;
             margin: 2.0rem 0 0 0;
+            .selected {
+                color: #EB734B;
+                &__txt {
+                    position: relative;
+                }
+                &__txt::after {
+                    content: "";
+                    position: absolute;
+                    left: -0.1rem;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: -1.0rem;
+                    width: 5.4rem;
+                    height: 0.2rem;
+                    background: #EB734B;
+                }
+            }
             .center {
                 position: relative;
             }

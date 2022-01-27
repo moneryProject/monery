@@ -3,9 +3,9 @@
         <Header />
         <main class="friendList">
             <div class="friendList__stats">
-                <div class="friendList__stats__box">
+                <div class="friendList__stats__box selected">
                     <p>92</p>
-                    <p>友達</p>
+                    <p class="selected__txt">友達</p>
                 </div>
                 <div class="friendList__stats__box center">
                     <p>10</p>
@@ -64,6 +64,23 @@ export default {
             width: 100%;
             height: 6.0rem;
             margin: 2.0rem 0 0 0;
+            .selected {
+                color: #EB734B;
+                &__txt {
+                    position: relative;
+                }
+                &__txt::after {
+                    content: "";
+                    position: absolute;
+                    left: -1.2rem;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: -1.0rem;
+                    width: 5.4rem;
+                    height: 0.2rem;
+                    background: #EB734B;
+                }
+            }
             .center {
                 position: relative;
             }
