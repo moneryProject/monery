@@ -38,6 +38,27 @@
                     <p class="moneyTxt">￥1000</p>
                     <div class="nextIcon"></div>
                 </div>
+                <div class="chatMoney__transaction__content">
+                    <p class="to">田中</p>
+                    <div class="arrowIcon"></div>
+                    <p class="from">石丸</p>
+                    <p class="moneyTxt">￥1000</p>
+                    <div class="nextIcon"></div>
+                </div>
+                <div class="chatMoney__transaction__content">
+                    <p class="to">田中</p>
+                    <div class="arrowIcon"></div>
+                    <p class="from">石丸</p>
+                    <p class="moneyTxt">￥1000</p>
+                    <div class="nextIcon"></div>
+                </div>
+                <div class="chatMoney__transaction__content">
+                    <p class="to">田中</p>
+                    <div class="arrowIcon"></div>
+                    <p class="from">石丸</p>
+                    <p class="moneyTxt">￥1000</p>
+                    <div class="nextIcon"></div>
+                </div>
             </div>
         </main>
     </div>
@@ -119,6 +140,37 @@ export default {
                 font-weight: 700;
                 font-style: normal;
                 color: #EB734B;
+                margin: 0 0 2.4rem 0;
+            }
+            &__content {
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                margin: 0 0 2.1rem 0;
+                .to {
+                    width: 7.2rem;
+                    text-align: center;
+                }
+                .arrowIcon {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background-image: url('../../assets/message/arrowIcon.svg');
+                    background-position: center;
+                }
+                .from {
+                    width: 7.2rem;
+                    text-align: center;
+                }
+                .moneyTxt {
+                    width: 10.0rem;
+                    text-align: center;
+                }
+                .nextIcon {
+                    width: 1.0rem;
+                    height: 1.0rem;
+                    background-image: url('../../assets/message/nextIcon.svg');
+                    background-position: center;
+                }
             }
         }
     }
