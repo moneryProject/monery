@@ -19,6 +19,11 @@ import Message from '@/views/Message'
 import Profile from '@/views/MessageOthers/Profile'
 import MessagePage from '@/views/MessageOthers/MessagePage'
 import MessageDetail from '@/views/MessageOthers/MessageDetail'
+import Schedule from '@/views/MessageOthers/Schedule'
+import MakeEvent from '@/views/MessageOthers/MakeEvent'
+import GiftList from '@/views/MessageOthers/GiftList'
+import ForGift from '@/views/MessageOthers/ForGift'
+import Done from '@/views/MessageOthers/Done'
 //Mypage
 import Mypage from '@/views/Mypage'
 import FriendList from '@/views/MypageOthers/FriendList'
@@ -109,6 +114,31 @@ const routes = [
     path: '/MessageDetail',
     name: 'MessageDetail',
     component: MessageDetail,
+  },
+  {
+    path: '/Schedule',
+    name: 'Schedule',
+    component: Schedule,
+  },
+  {
+    path: '/MakeEvent',
+    name: 'MakeEvent',
+    component: MakeEvent,
+  },
+  {
+    path: '/GiftList',
+    name: 'GiftList',
+    component: GiftList,
+  },
+  {
+    path: '/ForGift',
+    name: 'ForGift',
+    component: ForGift,
+  },
+  {
+    path: '/Done',
+    name: 'Done',
+    component: Done,
   },
   // MyPage
   {
