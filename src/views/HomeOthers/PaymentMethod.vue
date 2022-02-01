@@ -1,7 +1,7 @@
 <template>
     <div class="method">
         <header class="header">
-            <router-link to="" class="header__link">
+            <router-link to="Payer" class="header__link">
                 <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
             </router-link>
             <h1 class="header__heading">支払い方法</h1>
@@ -11,17 +11,17 @@
                 <h2 class="method__wrap__pay__heading">キャッシュレスで支払う</h2>
                 <p class="method__wrap__pay__text">QRやIDで支払いをやりとり</p>
                 <div class="method__wrap__pay__btnbox">
-                    <router-link to="" class="method__wrap__pay__btnbox__link">
+                    <router-link to="AmountInput" class="method__wrap__pay__btnbox__link">
                         <div class="method__wrap__pay__btnbox__link__circle"></div>
                         <p class="method__wrap__pay__btnbox__link__text">クレジットカードで支払う</p>
                         <img src="../../assets/home/arrow.svg" alt="" class="method__wrap__pay__btnbox__link__arrow">
                     </router-link>
-                    <router-link to="" class="method__wrap__pay__btnbox__link">
+                    <router-link to="AmountInput" class="method__wrap__pay__btnbox__link">
                         <div class="method__wrap__pay__btnbox__link__circle"></div>
                         <p class="method__wrap__pay__btnbox__link__text">Paypayで支払う</p>
                         <img src="../../assets/home/arrow.svg" alt="" class="method__wrap__pay__btnbox__link__arrow">
                     </router-link>
-                    <router-link to="" class="method__wrap__pay__btnbox__link">
+                    <router-link to="AmountInput" class="method__wrap__pay__btnbox__link">
                         <div class="method__wrap__pay__btnbox__link__circle"></div>
                         <p class="method__wrap__pay__btnbox__link__text">LINEpayで支払う</p>
                         <img src="../../assets/home/arrow.svg" alt="" class="method__wrap__pay__btnbox__link__arrow">
@@ -32,7 +32,7 @@
                 <h2 class="method__wrap__pay__heading">直接支払う</h2>
                 <p class="method__wrap__pay__text">本人に手渡しで支払う</p>
                 <div class="method__wrap__pay__btnbox">
-                    <router-link to="" class="method__wrap__pay__btnbox__link">
+                    <router-link to="AmountInput" class="method__wrap__pay__btnbox__link">
                         <div class="method__wrap__pay__btnbox__link__circle"></div>
                         <p class="method__wrap__pay__btnbox__link__text">現金で支払う</p>
                         <img src="../../assets/home/arrow.svg" alt="" class="method__wrap__pay__btnbox__link__arrow">

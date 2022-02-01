@@ -6,6 +6,7 @@ import Payment from '@/views/HomeOthers/Payment'
 import Payer from '@/views/HomeOthers/Payer'
 import PaymentMethod from '@/views/HomeOthers/PaymentMethod'
 import Scan from '@/views/HomeOthers/Scan'
+import AmountInput from '@/views/HomeOthers/AmountInput'
 // Search
 import Search from '@/views/Search'
 import Location from '@/views/SearchOthers/Location'
@@ -57,6 +58,11 @@ const routes = [
     path: '/Scan',
     name: 'Scan',
     component: Scan,
+  },
+  {
+    path: '/AmountInput',
+    name: 'AmountInput',
+    component: AmountInput,
   },
   // Search
   {
