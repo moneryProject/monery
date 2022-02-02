@@ -5,8 +5,12 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
   margin-bottom: 40px;
+  box-shadow: 0px 4px 4px 0px #CACACA40;
   &__link{
     position: absolute;
     bottom: 0;

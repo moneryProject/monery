@@ -1,0 +1,37 @@
+.content{
+    width: 343px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #F3F3F3;
+    margin: 0 auto 16px;
+    color: $mainTextColor;
+    text-decoration: none;
+    &__icon{
+        width: 30px;
+        margin: 0 16px;
+        text-align: center;
+        &__text{
+            font-size: 0.4rem;
+        }
+    }
+    &__message{
+        color: $mainTextColor;
+        h2{
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+        }
+        &__date{
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+        }
+    }
+    &__money{
+        margin: 0 24px 0 auto;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+    }
+}

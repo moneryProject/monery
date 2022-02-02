@@ -30,6 +30,10 @@ import Mypage from '@/views/Mypage'
 import FriendList from '@/views/MypageOthers/FriendList'
 import GroupList from '@/views/MypageOthers/GroupList'
 import LocationList from '@/views/MypageOthers/LocationList'
+// Notification
+import Notice from '@/views/NoticeOthers/Notice'
+import Ticket from '@/views/NoticeOthers/Ticket'
+import Reimburse from '@/views/NoticeOthers/Reimburse'
 Vue.use(VueRouter)
 
 const routes = [
@@ -167,6 +171,22 @@ const routes = [
     name: 'LocationList',
     component: LocationList,
   },
+  {
+    path: '/Notice',
+    name: 'Notice',
+    component: Notice,
+  },
+  {
+    path: '/Ticket',
+    name: 'Ticket',
+    component: Ticket,
+  },
+  {
+    path: '/Reimburse',
+    name: 'Reimburse',
+    component: Reimburse,
+  },
+  // Notification
 ]
 
 const router = new VueRouter({
