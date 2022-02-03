@@ -67,7 +67,7 @@ export default {
 @import "@/sass/header";
 .payer{
     &__wrap{
-        margin: 0 16px;
+        margin: 120px 16px 0;
         &__search{
             width: 343px;
             height: 34px;

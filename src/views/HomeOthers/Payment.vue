@@ -24,8 +24,8 @@
                 </section>
             </div>
             <label class="payment__wrap__check"><input type="checkbox" @click="flag = !flag">支払いを確認しました</label>
-            <router-link to="" class="payment__wrap__link" v-if="!flag">ホームに戻る</router-link>
-            <router-link to="" class="payment__wrap__payback" v-else>建て替えを返済する</router-link>
+            <div class="payment__wrap__link" v-if="!flag">お金を受け取る</div>
+            <router-link to="PayDone" class="payment__wrap__payback" v-else>お金を受け取る</router-link>
         </div>
     </div>
 </template>
@@ -47,6 +47,7 @@ export default {
 .payment__wrap{
     text-align: center;
     color: $mainTextColor;
+    margin-top: 120px;
     &__icon{
         margin-bottom: 16px;
     }

@@ -53,6 +53,7 @@ export default {
 .amount__wrap{
     text-align: center;
     color: $mainTextColor;
+    margin-top: 120px;
     &__icon{
         margin-bottom: 16px;
     }
