@@ -1,6 +1,11 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <h1 class="header__heading">ホーム</h1>
+            <router-link to="Notice" class="header__link">
+                <img src="../assets/home/bell.svg" alt="">
+            </router-link>
+        </header>
         <main class='mypage'>
             <div class="mypage__headImg">
                 <div class="mypage__headImg__icon"></div>
@@ -100,11 +105,9 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
 import GlobalNav from '@/components/GlobalNav'
 export default {
     components: {
-        Header,
         GlobalNav,
     },
 }
@@ -112,12 +115,35 @@ export default {
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+    .header{
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-bottom: 6px;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        &__heading{
+            color: $headerTextColor;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        &__link{
+            position: absolute;
+            bottom: 0;
+            right: 16px;
+        }
+    }
     .mypage {
         width: 100vw;
         height: calc(100vh - 8.0rem);
         font-family: 'ヒラギノ角ゴシック';
         color: #4F4F4F;
         overflow-x: scroll;
+        margin-top: 8.0rem;
         // background: tomato;
         &__headImg {
             position: relative;

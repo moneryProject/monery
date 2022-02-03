@@ -1,6 +1,11 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <router-link to="Schedule" class="header__link">
+                <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
+            </router-link>
+            <h1 class="header__heading">新規イベント作成</h1>
+        </header>
         <main class='makeEvent'>
             <div class="makeEvent__title">
                 <input type="text" placeholder="イベントタイトル">
@@ -50,16 +55,11 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-export default {
-    components: {
-        Header,
-    },
-}
 </script>
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+    @import "@/sass/header";
     .header {
         box-shadow: 0px 8px 16px -3px rgba(202, 202, 202, 0.25);
     }
@@ -70,6 +70,7 @@ export default {
         color: #4F4F4F;
         overflow-x: scroll;
         padding: 4.0rem 0 0 0;
+        margin-top: 8.0rem;
         &__title {
             width: 31.9rem;
             height: 2.8rem;

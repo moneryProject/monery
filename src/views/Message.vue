@@ -1,6 +1,11 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <router-link to="./" class="header__link">
+                <img src="@/assets/back-icon.svg" alt="戻るボタンアイコン">
+            </router-link>
+            <h1 class="header__heading">さよならアウトレイジ</h1>
+        </header>
         <main class='message'>
             <div class="partner mess">
                 <div class="partner__icon"></div>
@@ -39,9 +44,13 @@
                 </div>
                 <div class="myself__icon"></div>
             </div>
+            <div class="message__current">
+                <router-link to="Message" class="message__current__link"></router-link>
+                <router-link to="MessageDetail" class="message__current__link"></router-link>
+            </div>
             <div class="message__input">
                 <div class="message__input__money"></div>
-                <div class="message__input__schedule"></div>
+                <router-link to="Schedule" class="message__input__schedule"></router-link>
                 <div class="message__input__img"></div>
                 <div class="message__input__form">
                     <input type="text">
@@ -52,16 +61,17 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-export default {
-    components: {
-        Header,
-    },
-}
+// import Header from '@/components/Header'
+// export default {
+//     components: {
+//         Header,
+//     },
+// }
 </script>
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+    @import "@/sass/header";
     .message {
         position: relative;
         width: 100vw;
@@ -70,6 +80,7 @@ export default {
         color: #4F4F4F;
         overflow-x: scroll;
         padding: 4.0rem 1.6rem 0 1.6rem;
+        margin-top: 8.0rem;
         .mess {
             margin: 0 0 1.6rem 0;
         }
@@ -108,6 +119,22 @@ export default {
                 margin: 0 0.8rem 0 0;
             }
         }
+        &__current{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto auto 0;
+            &__link{
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 100%;
+                background-color: #D8D8D8;
+                margin-right: 0.8rem;
+                &:first-child{
+                    background-color: #EB734B;
+                }
+            }
+        }
         &__input {
             position: absolute;
             left: -1.6rem;
@@ -131,6 +158,7 @@ export default {
                 background-image: url('../assets/message/scheduleIcon.svg');
                 background-position: center;
                 margin: 0 1.6rem 0 0;
+                text-decoration: none;
             }
             &__img {
                 width: 2.0rem;

@@ -1,6 +1,11 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <router-link to="Message" class="header__link">
+                <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
+            </router-link>
+            <h1 class="header__heading">さよならアウトレイジ</h1>
+        </header>
         <main class='chatMoney'>
             <button class="chatMoney__addBtn">建て替え金額を追加</button>
             <div class="chatMoney__calculate">
@@ -143,16 +148,11 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-export default {
-    components: {
-        Header,
-    },
-}
 </script>
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+    @import "@/sass/header";
     .header {
         box-shadow: 0px 8px 16px -3px rgba(202, 202, 202, 0.25);
     }
@@ -163,6 +163,7 @@ export default {
         color: #4F4F4F;
         overflow-x: scroll;
         padding: 4.0rem 0 0 0;
+        margin-top: 8.0rem;
         &__addBtn {
             display: block;
             width: 29.5rem;

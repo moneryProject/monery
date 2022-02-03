@@ -1,8 +1,13 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <router-link to="Message" class="header__link">
+                <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
+            </router-link>
+            <h1 class="header__heading">イベントスケジュール</h1>
+        </header>
         <main class='schedule'>
-            <button class="scheduleView__addBtn">＋新イベント追加</button>
+            <router-link to="MakeEvent" class="scheduleView__addBtn">＋新イベント追加</router-link>
             <div class="scheduleView__schedule">
                 <h2>2021年9月28日</h2>
                 <div class="scheduleView__schedule__content">
@@ -139,18 +144,16 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-export default {
-    components: {
-        Header,
-    },
-}
 </script>
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+    @import "@/sass/header";
     .header {
         box-shadow: 0px 8px 16px -3px rgba(202, 202, 202, 0.25);
+    }
+    .schedule{
+        margin-top: 12.0rem;
     }
     .scheduleView {
         position: relative;
@@ -161,16 +164,20 @@ export default {
         padding: 4.0rem 0 0 0;
         &__addBtn {
             display: block;
-            padding: 1.4rem 7.4rem;
+            width: 28.5rem;
+            line-height: 4.8rem;
             border: 1px solid #EB734B;
             color: #EB734B;
             border-radius: 11.2rem;
             margin: 2.0rem auto 4.0rem auto;
             font-size: 1.4rem;
             font-weight: 700;
+            text-decoration: none;
+            text-align: center;
         }
         &__schedule {
             width: 100vw;
+            margin-top: 8.0rem;
             h2 {
                 text-align: left;
                 font-size: 1.8rem;
