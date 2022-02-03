@@ -48,154 +48,154 @@ const routes = [
     component: Home,
   },
   {
-    path: displayPath+'/Payment',
+    path: displayPath+'Payment',
     name: 'Payment',
     component: Payment,
   },
   {
-    path: displayPath+'/Payer',
+    path: displayPath+'Payer',
     name: 'Payer',
     component: Payer,
   },
   {
-    path: displayPath+'/PaymentMethod',
+    path: displayPath+'PaymentMethod',
     name: 'PaymentMethod',
     component: PaymentMethod,
   },
   {
-    path: displayPath+'/Scan',
+    path: displayPath+'Scan',
     name: 'Scan',
     component: Scan,
   },
   {
-    path: displayPath+'/AmountInput',
+    path: displayPath+'AmountInput',
     name: 'AmountInput',
     component: AmountInput,
   },
   {
-    path: displayPath+'/PayDone',
+    path: displayPath+'PayDone',
     name: 'PayDone',
     component: PayDone,
   },
   // Search
   {
-    path: displayPath+'/Search',
+    path: displayPath+'Search',
     name: 'Search',
     component: Search,
   },
   {
-    path: displayPath+'/Location',
+    path: displayPath+'Location',
     name: 'Location',
     component: Location,
   },
   {
-    path: displayPath+'/Budget',
+    path: displayPath+'Budget',
     name: 'Budget',
     component: Budget,
   },
   {
-    path: displayPath+'/Theme',
+    path: displayPath+'Theme',
     name: 'Theme',
     component: Theme,
   },
   {
-    path: displayPath+'/PlanDetail',
+    path: displayPath+'PlanDetail',
     name: 'PlanDetail',
     component: PlanDetail,
   },
   {
-    path: displayPath+'/SearchResult',
+    path: displayPath+'SearchResult',
     name: 'SearchResult',
     component: SearchResult,
   },
   {
-    path: displayPath+'/Favorite',
+    path: displayPath+'Favorite',
     name: 'Favorite',
     component: Favorite,
   },
   // Message
   {
-    path: displayPath+'/Message',
+    path: displayPath+'Message',
     name: 'Message',
     component: Message,
   },
   {
-    path: displayPath+'/Profile',
+    path: displayPath+'Profile',
     name: 'Profile',
     component: Profile,
   },
   {
-    path: displayPath+'/MessagePage',
+    path: displayPath+'MessagePage',
     name: 'MessagePage',
     component: MessagePage,
   },
   {
-    path: displayPath+'/MessageDetail',
+    path: displayPath+'MessageDetail',
     name: 'MessageDetail',
     component: MessageDetail,
   },
   {
-    path: displayPath+'/Schedule',
+    path: displayPath+'Schedule',
     name: 'Schedule',
     component: Schedule,
   },
   {
-    path: displayPath+'/MakeEvent',
+    path: displayPath+'MakeEvent',
     name: 'MakeEvent',
     component: MakeEvent,
   },
   {
-    path: displayPath+'/GiftList',
+    path: displayPath+'GiftList',
     name: 'GiftList',
     component: GiftList,
   },
   {
-    path: displayPath+'/ForGift',
+    path: displayPath+'ForGift',
     name: 'ForGift',
     component: ForGift,
   },
   {
-    path: displayPath+'/Done',
+    path: displayPath+'Done',
     name: 'Done',
     component: Done,
   },
   // MyPage
   {
-    path: displayPath+'/Mypage',
+    path: displayPath+'Mypage',
     name: 'Mypage',
     component: Mypage,
   },
   {
-    path: displayPath+'/FriendList',
+    path: displayPath+'FriendList',
     name: 'FriendList',
     component: FriendList,
   },
   {
-    path: displayPath+'/GroupList',
+    path: displayPath+'GroupList',
     name: 'GroupList',
     component: GroupList,
   },
   {
-    path: displayPath+'/LocationList',
+    path: displayPath+'LocationList',
     name: 'LocationList',
     component: LocationList,
   },
+  // Notification
   {
-    path: displayPath+'/Notice',
+    path: displayPath+'Notice',
     name: 'Notice',
     component: Notice,
   },
   {
-    path: displayPath+'/Ticket',
+    path: displayPath+'Ticket',
     name: 'Ticket',
     component: Ticket,
   },
   {
-    path: displayPath+'/Reimburse',
+    path: displayPath+'Reimburse',
     name: 'Reimburse',
     component: Reimburse,
   },
-  // Notification
 ]
 // ローカルパス
 // const routes = [
