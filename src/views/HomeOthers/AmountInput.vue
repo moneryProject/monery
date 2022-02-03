@@ -1,7 +1,7 @@
 <template>
     <div class="amount">
         <header class="header">
-            <router-link to="AmountInput" class="header__link">
+            <router-link to="PaymentMethod" class="header__link">
                 <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
             </router-link>
             <h1 class="header__heading">金額入力</h1>
