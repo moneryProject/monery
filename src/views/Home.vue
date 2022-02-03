@@ -64,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/sass/_vars";
 .home{
-    margin-bottom: 70px;
+    margin: 70px 0;
     &__display{
         width: 100vw;
         height: 320px;

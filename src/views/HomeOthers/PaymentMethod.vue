@@ -53,7 +53,7 @@ export default {
 @import "@/sass/_vars";
 @import "@/sass/header";
 .method__wrap{
-    margin: 0 16px;
+    margin: 120px 16px 0;
     &__pay{
         margin-bottom: 64px;
         &__heading{

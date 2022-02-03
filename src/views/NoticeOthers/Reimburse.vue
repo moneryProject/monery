@@ -1,50 +1,36 @@
 <template>
-    <div class="payment">
+    <div class="reimburse">
         <header class="header">
-            <router-link to="AmountInput" class="header__link">
+            <router-link to="Notice" class="header__link">
                 <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
             </router-link>
-            <h1 class="header__heading">Paypayで支払う</h1>
+            <h1 class="header__heading">立て替え詳細</h1>
         </header>
-        <div class="payment__wrap">
-            <div class="payment__wrap__icon">
-                <img src="../../assets/home/human-icon.png" alt="">
+        <div class="reimburse__wrap">
+            <div class="reimburse__wrap__icon">
+                <img src="../../assets/notice/human02.png" alt="">
             </div>
-            <p class="payment__wrap__text">山本さんにキャッシュレスで支払う</p>
-            <p class="payment__wrap__id">ID : 0806ffu</p>
-            <h2 class="payment__wrap__money">2,500<span>円</span></h2>
-            <div class="payment__wrap__detail">
-                <section class="payment__wrap__detail__box">
-                    <p class="payment__wrap__detail__box__heading">日付・時間</p>
-                    <p class="payment__wrap__detail__box__text">2022年1月10日 22時 50分</p>
+            <p class="reimburse__wrap__text">ホテル代で支払い</p>
+            <p class="reimburse__wrap__for">山本さんへ</p>
+            <h2 class="reimburse__wrap__money">3,000<span>円</span></h2>
+            <div class="reimburse__wrap__detail">
+                <section class="reimburse__wrap__detail__box">
+                    <p class="reimburse__wrap__detail__box__heading">日付・時間</p>
+                    <p class="reimburse__wrap__detail__box__text">2022年1月10日 22時 50分</p>
                 </section>
-                <section class="payment__wrap__detail__box">
-                    <p class="payment__wrap__detail__box__heading">支払い方法</p>
-                    <p class="payment__wrap__detail__box__text">キャッシュレス / Paypay決済</p>
+                <section class="reimburse__wrap__detail__box">
+                    <p class="reimburse__wrap__detail__box__heading">支払い方法</p>
+                    <p class="reimburse__wrap__detail__box__text">キャッシュレス / Paypay決済</p>
                 </section>
             </div>
-            <label class="payment__wrap__check"><input type="checkbox" @click="flag = !flag">支払いを確認しました</label>
-            <div class="payment__wrap__link" v-if="!flag">お金を受け取る</div>
-            <router-link to="PayDone" class="payment__wrap__payback" v-else>お金を受け取る</router-link>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-    data(){
-        return{
-            linkText: "ホームに戻る",
-            flag: false
-        }
-    }
-}
-</script>
-
 <style lang="scss" scoped>
 @import "@/sass/_vars";
 @import "@/sass/header";
-.payment__wrap{
+.reimburse__wrap{
     text-align: center;
     color: $mainTextColor;
     margin-top: 120px;
@@ -53,10 +39,12 @@ export default {
     }
     &__text{
         font-size: 1.2rem;
+        letter-spacing: 0.8px;
         font-weight: bold;
     }
-    &__id{
+    &__for{
         font-size: 1rem;
+        letter-spacing: 1.2px;
     }
     &__money{
         color: $payTextColor;
@@ -112,7 +100,7 @@ export default {
         border-radius: 112px;
     }
     &__payback{
-        @extend .payment__wrap__link;
+        @extend .reimburse__wrap__link;
         background-color: #EB734B;
     }
 }

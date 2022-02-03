@@ -1,7 +1,7 @@
 <template>
     <div class="payer">
         <header class="header">
-            <router-link to="/" class="header__link">
+            <router-link to="./" class="header__link">
                 <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
             </router-link>
             <h1 class="header__heading">支払い相手</h1>
@@ -67,7 +67,7 @@ export default {
 @import "@/sass/header";
 .payer{
     &__wrap{
-        margin: 0 16px;
+        margin: 120px 16px 0;
         &__search{
             width: 343px;
             height: 34px;
