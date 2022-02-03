@@ -95,14 +95,17 @@
                 </div>
             </div>
         </main>
+        <GlobalNav />
     </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import GlobalNav from '@/components/GlobalNav'
 export default {
     components: {
         Header,
+        GlobalNav,
     },
 }
 </script>
@@ -121,6 +124,8 @@ export default {
             width: 100%;
             height: 15.3rem;
             background-image: url('../assets/mypage/headImg.png');
+            background-size: cover;
+            background-position: center;
             &__icon {
                 position: absolute;
                 left: 0;
