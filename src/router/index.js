@@ -8,6 +8,8 @@ import PaymentMethod from '@/views/HomeOthers/PaymentMethod'
 import Scan from '@/views/HomeOthers/Scan'
 import AmountInput from '@/views/HomeOthers/AmountInput'
 import PayDone from '@/views/HomeOthers/PayDone'
+import AmountInputMoney from '@/views/HomeOthers/AmountInputMoney'
+import PaymentMoney from '@/views/HomeOthers/PaymentMoney'
 // Search
 import Search from '@/views/Search'
 import Location from '@/views/SearchOthers/Location'
@@ -243,6 +245,16 @@ const routes = [
     path: '/PayDone',
     name: 'PayDone',
     component: PayDone,
+  },
+  {
+    path: '/AmountInputMoney',
+    name: 'AmountInputMoney',
+    component: AmountInputMoney,
+  },
+  {
+    path: '/PaymentMoney',
+    name: 'PaymentMoney',
+    component: PaymentMoney,
   },
   // Search
   {

@@ -33,7 +33,7 @@
             </div>
             <div class="home__button">
                 <router-link to="Payer" class="home__button__payback">建て替えを返済する</router-link>
-                <router-link to="" class="home__button__receive">現金でお金を受け取る</router-link>
+                <router-link to="AmountInputMoney" class="home__button__receive">現金でお金を受け取る</router-link>
             </div>
             <div class="home__history">
                 <h2 class="home__history__heading">お金やりとり歴</h2>
