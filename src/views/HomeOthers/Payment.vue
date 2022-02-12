@@ -12,7 +12,7 @@
             </div>
             <p class="payment__wrap__text">山本さんにキャッシュレスで支払う</p>
             <p class="payment__wrap__id">ID : 0806ffu</p>
-            <h2 class="payment__wrap__money">2,500<span>円</span></h2>
+            <h2 class="payment__wrap__money">{{this.pay.output}}<span>円</span></h2>
             <div class="payment__wrap__detail">
                 <section class="payment__wrap__detail__box">
                     <p class="payment__wrap__detail__box__heading">日付・時間</p>
@@ -35,9 +35,13 @@ export default {
     data(){
         return{
             linkText: "ホームに戻る",
-            flag: false
+            flag: false,
+            pay: ''
         }
-    }
+    },
+    mounted() {
+        this.pay = JSON.parse(localStorage.getItem('obj'))
+    },
 }
 </script>
 
