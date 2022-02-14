@@ -3,7 +3,7 @@
         <ul class="nav__wrap">
             <li class="nav__wrap__content">
                 <!-- home -->
-                <router-link to="./" class="nav__wrap__content__link" exact>
+                <router-link to="Home" class="nav__wrap__content__link" exact>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 10.6316L11.099 2L21 10.6316" stroke="#FFB29D" stroke-width="2" stroke-linecap="round"/>
                         <path d="M3.37646 8.94727V21.9999H18.426V8.94727" stroke="#FFB29D" stroke-width="2" stroke-linecap="round"/>

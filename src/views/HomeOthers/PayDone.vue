@@ -11,7 +11,7 @@
             </div>
             <h2 class="done__wrap__message">木田さんとの<br>お金のやり取りを完了しました</h2>
             <p class="done__wrap__date">2021 / 01 / 25</p>
-            <router-link to="./" class="done__wrap__link">ホームに戻る</router-link>
+            <router-link to="Home" class="done__wrap__link">ホームに戻る</router-link>
         </div>
     </div>
 </template>

@@ -4,13 +4,13 @@
             <router-link to="AmountInput" class="header__link">
                 <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
             </router-link>
-            <h1 class="header__heading">Paypayで支払う</h1>
+            <h1 class="header__heading">現金で支払う</h1>
         </header>
         <div class="payment__wrap">
             <div class="payment__wrap__icon">
                 <img src="../../assets/home/human-icon.png" alt="">
             </div>
-            <p class="payment__wrap__text">山本さんにキャッシュレスで支払う</p>
+            <p class="payment__wrap__text">木田さんに直接受け取る</p>
             <p class="payment__wrap__id">ID : 0806ffu</p>
             <h2 class="payment__wrap__money">{{this.pay.output}}<span>円</span></h2>
             <div class="payment__wrap__detail">
@@ -20,7 +20,7 @@
                 </section>
                 <section class="payment__wrap__detail__box">
                     <p class="payment__wrap__detail__box__heading">支払い方法</p>
-                    <p class="payment__wrap__detail__box__text">キャッシュレス / Paypay決済</p>
+                    <p class="payment__wrap__detail__box__text">現金</p>
                 </section>
             </div>
             <label class="payment__wrap__check"><input type="checkbox" @click="flag = !flag">支払いを確認しました</label>

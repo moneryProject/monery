@@ -10,7 +10,7 @@
             <div class="amount__wrap__icon">
                 <img src="../../assets/home/human-icon.png" alt="">
             </div>
-            <p class="amount__wrap__text">山本さんへ送る</p>
+            <p class="amount__wrap__text">木田さんへ送る</p>
             <table class="amount__wrap__calc">
                 <tr>
                     <td colspan="3"><input type="text" v-model="output" class="amount__wrap__money"></td>
@@ -60,7 +60,7 @@ export default {
             localStorage.setItem('obj', JSON.stringify({
               output: this.output,
             }))
-            this.$router.push('Payment')
+            this.$router.push('PaymentMoney')
         }
     }
 }

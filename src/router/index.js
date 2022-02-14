@@ -8,6 +8,8 @@ import PaymentMethod from '@/views/HomeOthers/PaymentMethod'
 import Scan from '@/views/HomeOthers/Scan'
 import AmountInput from '@/views/HomeOthers/AmountInput'
 import PayDone from '@/views/HomeOthers/PayDone'
+import AmountInputMoney from '@/views/HomeOthers/AmountInputMoney'
+import PaymentMoney from '@/views/HomeOthers/PaymentMoney'
 // Search
 import Search from '@/views/Search'
 import Location from '@/views/SearchOthers/Location'
@@ -35,326 +37,380 @@ import LocationList from '@/views/MypageOthers/LocationList'
 import Notice from '@/views/NoticeOthers/Notice'
 import Ticket from '@/views/NoticeOthers/Ticket'
 import Reimburse from '@/views/NoticeOthers/Reimburse'
+// Signin Signup
+import FirstView from '@/views/Signup/FirstView'
+import Signup from '@/views/Signup/Signup'
+import Signin from '@/views/Signup/Signin'
+import Registration from '@/views/Signup/Registration'
+import Confirmation from '@/views/Signup/Confirmation'
+import RegistrationDone from '@/views/Signup/RegistrationDone'
+import RegisterProfile from '@/views/Signup/RegisterProfile'
+
 Vue.use(VueRouter)
 
-const displayPath = "/ecc/hisimaru/works/monery/";
+// const displayPath = "/ecc/hisimaru/works/monery/";
 
 // グローバルパス
-const routes = [
-  // Home
-  {
-    path: displayPath,
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: displayPath+'Payment',
-    name: 'Payment',
-    component: Payment,
-  },
-  {
-    path: displayPath+'Payer',
-    name: 'Payer',
-    component: Payer,
-  },
-  {
-    path: displayPath+'PaymentMethod',
-    name: 'PaymentMethod',
-    component: PaymentMethod,
-  },
-  {
-    path: displayPath+'Scan',
-    name: 'Scan',
-    component: Scan,
-  },
-  {
-    path: displayPath+'AmountInput',
-    name: 'AmountInput',
-    component: AmountInput,
-  },
-  {
-    path: displayPath+'PayDone',
-    name: 'PayDone',
-    component: PayDone,
-  },
-  // Search
-  {
-    path: displayPath+'Search',
-    name: 'Search',
-    component: Search,
-  },
-  {
-    path: displayPath+'Location',
-    name: 'Location',
-    component: Location,
-  },
-  {
-    path: displayPath+'Budget',
-    name: 'Budget',
-    component: Budget,
-  },
-  {
-    path: displayPath+'Theme',
-    name: 'Theme',
-    component: Theme,
-  },
-  {
-    path: displayPath+'PlanDetail',
-    name: 'PlanDetail',
-    component: PlanDetail,
-  },
-  {
-    path: displayPath+'SearchResult',
-    name: 'SearchResult',
-    component: SearchResult,
-  },
-  {
-    path: displayPath+'Favorite',
-    name: 'Favorite',
-    component: Favorite,
-  },
-  // Message
-  {
-    path: displayPath+'Message',
-    name: 'Message',
-    component: Message,
-  },
-  {
-    path: displayPath+'Profile',
-    name: 'Profile',
-    component: Profile,
-  },
-  {
-    path: displayPath+'MessagePage',
-    name: 'MessagePage',
-    component: MessagePage,
-  },
-  {
-    path: displayPath+'MessageDetail',
-    name: 'MessageDetail',
-    component: MessageDetail,
-  },
-  {
-    path: displayPath+'Schedule',
-    name: 'Schedule',
-    component: Schedule,
-  },
-  {
-    path: displayPath+'MakeEvent',
-    name: 'MakeEvent',
-    component: MakeEvent,
-  },
-  {
-    path: displayPath+'GiftList',
-    name: 'GiftList',
-    component: GiftList,
-  },
-  {
-    path: displayPath+'ForGift',
-    name: 'ForGift',
-    component: ForGift,
-  },
-  {
-    path: displayPath+'Done',
-    name: 'Done',
-    component: Done,
-  },
-  // MyPage
-  {
-    path: displayPath+'Mypage',
-    name: 'Mypage',
-    component: Mypage,
-  },
-  {
-    path: displayPath+'FriendList',
-    name: 'FriendList',
-    component: FriendList,
-  },
-  {
-    path: displayPath+'GroupList',
-    name: 'GroupList',
-    component: GroupList,
-  },
-  {
-    path: displayPath+'LocationList',
-    name: 'LocationList',
-    component: LocationList,
-  },
-  // Notification
-  {
-    path: displayPath+'Notice',
-    name: 'Notice',
-    component: Notice,
-  },
-  {
-    path: displayPath+'Ticket',
-    name: 'Ticket',
-    component: Ticket,
-  },
-  {
-    path: displayPath+'Reimburse',
-    name: 'Reimburse',
-    component: Reimburse,
-  },
-]
-// ローカルパス
 // const routes = [
 //   // Home
 //   {
-//     path: '/',
+//     path: displayPath+'Home',
 //     name: 'Home',
 //     component: Home,
 //   },
 //   {
-//     path: '/Payment',
+//     path: displayPath+'Payment',
 //     name: 'Payment',
 //     component: Payment,
 //   },
 //   {
-//     path: '/Payer',
+//     path: displayPath+'Payer',
 //     name: 'Payer',
 //     component: Payer,
 //   },
 //   {
-//     path: '/PaymentMethod',
+//     path: displayPath+'PaymentMethod',
 //     name: 'PaymentMethod',
 //     component: PaymentMethod,
 //   },
 //   {
-//     path: '/Scan',
+//     path: displayPath+'Scan',
 //     name: 'Scan',
 //     component: Scan,
 //   },
 //   {
-//     path: '/AmountInput',
+//     path: displayPath+'AmountInput',
 //     name: 'AmountInput',
 //     component: AmountInput,
 //   },
 //   {
-//     path: '/PayDone',
+//     path: displayPath+'PayDone',
 //     name: 'PayDone',
 //     component: PayDone,
 //   },
 //   // Search
 //   {
-//     path: '/Search',
+//     path: displayPath+'Search',
 //     name: 'Search',
 //     component: Search,
 //   },
 //   {
-//     path: '/Location',
+//     path: displayPath+'Location',
 //     name: 'Location',
 //     component: Location,
 //   },
 //   {
-//     path: '/Budget',
+//     path: displayPath+'Budget',
 //     name: 'Budget',
 //     component: Budget,
 //   },
 //   {
-//     path: '/Theme',
+//     path: displayPath+'Theme',
 //     name: 'Theme',
 //     component: Theme,
 //   },
 //   {
-//     path: '/PlanDetail',
+//     path: displayPath+'PlanDetail',
 //     name: 'PlanDetail',
 //     component: PlanDetail,
 //   },
 //   {
-//     path: '/SearchResult',
+//     path: displayPath+'SearchResult',
 //     name: 'SearchResult',
 //     component: SearchResult,
 //   },
 //   {
-//     path: '/Favorite',
+//     path: displayPath+'Favorite',
 //     name: 'Favorite',
 //     component: Favorite,
 //   },
 //   // Message
 //   {
-//     path: '/Message',
+//     path: displayPath+'Message',
 //     name: 'Message',
 //     component: Message,
 //   },
 //   {
-//     path: '/Profile',
+//     path: displayPath+'Profile',
 //     name: 'Profile',
 //     component: Profile,
 //   },
 //   {
-//     path: '/MessagePage',
+//     path: displayPath+'MessagePage',
 //     name: 'MessagePage',
 //     component: MessagePage,
 //   },
 //   {
-//     path: '/MessageDetail',
+//     path: displayPath+'MessageDetail',
 //     name: 'MessageDetail',
 //     component: MessageDetail,
 //   },
 //   {
-//     path: '/Schedule',
+//     path: displayPath+'Schedule',
 //     name: 'Schedule',
 //     component: Schedule,
 //   },
 //   {
-//     path: '/MakeEvent',
+//     path: displayPath+'MakeEvent',
 //     name: 'MakeEvent',
 //     component: MakeEvent,
 //   },
 //   {
-//     path: '/GiftList',
+//     path: displayPath+'GiftList',
 //     name: 'GiftList',
 //     component: GiftList,
 //   },
 //   {
-//     path: '/ForGift',
+//     path: displayPath+'ForGift',
 //     name: 'ForGift',
 //     component: ForGift,
 //   },
 //   {
-//     path: '/Done',
+//     path: displayPath+'Done',
 //     name: 'Done',
 //     component: Done,
 //   },
 //   // MyPage
 //   {
-//     path: '/Mypage',
+//     path: displayPath+'Mypage',
 //     name: 'Mypage',
 //     component: Mypage,
 //   },
 //   {
-//     path: '/FriendList',
+//     path: displayPath+'FriendList',
 //     name: 'FriendList',
 //     component: FriendList,
 //   },
 //   {
-//     path: '/GroupList',
+//     path: displayPath+'GroupList',
 //     name: 'GroupList',
 //     component: GroupList,
 //   },
 //   {
-//     path: '/LocationList',
+//     path: displayPath+'LocationList',
 //     name: 'LocationList',
 //     component: LocationList,
 //   },
+//   // Notification
 //   {
-//     path: '/Notice',
+//     path: displayPath+'Notice',
 //     name: 'Notice',
 //     component: Notice,
 //   },
 //   {
-//     path: '/Ticket',
+//     path: displayPath+'Ticket',
 //     name: 'Ticket',
 //     component: Ticket,
 //   },
 //   {
-//     path: '/Reimburse',
+//     path: displayPath+'Reimburse',
 //     name: 'Reimburse',
 //     component: Reimburse,
 //   },
-//   // Notification
 // ]
+// ローカルパス
+const routes = [
+  // Home
+  {
+    path: '/Home',
+    name: 'Home',
+    component: Home,
+  },
+  {
+    path: '/Payment',
+    name: 'Payment',
+    component: Payment,
+  },
+  {
+    path: '/Payer',
+    name: 'Payer',
+    component: Payer,
+  },
+  {
+    path: '/PaymentMethod',
+    name: 'PaymentMethod',
+    component: PaymentMethod,
+  },
+  {
+    path: '/Scan',
+    name: 'Scan',
+    component: Scan,
+  },
+  {
+    path: '/AmountInput',
+    name: 'AmountInput',
+    component: AmountInput,
+  },
+  {
+    path: '/PayDone',
+    name: 'PayDone',
+    component: PayDone,
+  },
+  {
+    path: '/AmountInputMoney',
+    name: 'AmountInputMoney',
+    component: AmountInputMoney,
+  },
+  {
+    path: '/PaymentMoney',
+    name: 'PaymentMoney',
+    component: PaymentMoney,
+  },
+  // Search
+  {
+    path: '/Search',
+    name: 'Search',
+    component: Search,
+  },
+  {
+    path: '/Location',
+    name: 'Location',
+    component: Location,
+  },
+  {
+    path: '/Budget',
+    name: 'Budget',
+    component: Budget,
+  },
+  {
+    path: '/Theme',
+    name: 'Theme',
+    component: Theme,
+  },
+  {
+    path: '/PlanDetail',
+    name: 'PlanDetail',
+    component: PlanDetail,
+  },
+  {
+    path: '/SearchResult',
+    name: 'SearchResult',
+    component: SearchResult,
+  },
+  {
+    path: '/Favorite',
+    name: 'Favorite',
+    component: Favorite,
+  },
+  // Message
+  {
+    path: '/Message',
+    name: 'Message',
+    component: Message,
+  },
+  {
+    path: '/Profile',
+    name: 'Profile',
+    component: Profile,
+  },
+  {
+    path: '/MessagePage',
+    name: 'MessagePage',
+    component: MessagePage,
+  },
+  {
+    path: '/MessageDetail',
+    name: 'MessageDetail',
+    component: MessageDetail,
+  },
+  {
+    path: '/Schedule',
+    name: 'Schedule',
+    component: Schedule,
+  },
+  {
+    path: '/MakeEvent',
+    name: 'MakeEvent',
+    component: MakeEvent,
+  },
+  {
+    path: '/GiftList',
+    name: 'GiftList',
+    component: GiftList,
+  },
+  {
+    path: '/ForGift',
+    name: 'ForGift',
+    component: ForGift,
+  },
+  {
+    path: '/Done',
+    name: 'Done',
+    component: Done,
+  },
+  // MyPage
+  {
+    path: '/Mypage',
+    name: 'Mypage',
+    component: Mypage,
+  },
+  {
+    path: '/FriendList',
+    name: 'FriendList',
+    component: FriendList,
+  },
+  {
+    path: '/GroupList',
+    name: 'GroupList',
+    component: GroupList,
+  },
+  {
+    path: '/LocationList',
+    name: 'LocationList',
+    component: LocationList,
+  },
+  {
+    path: '/Notice',
+    name: 'Notice',
+    component: Notice,
+  },
+  {
+    path: '/Ticket',
+    name: 'Ticket',
+    component: Ticket,
+  },
+  {
+    path: '/Reimburse',
+    name: 'Reimburse',
+    component: Reimburse,
+  },
+  // Signup
+  {
+    path: '/Signup',
+    name: 'Signup',
+    component: Signup,
+  },
+  {
+    path: '/Signin',
+    name: 'Signin',
+    component: Signin,
+  },
+  {
+    path: '/Registration',
+    name: 'Registration',
+    component: Registration,
+  },
+  {
+    path: '/Confirmation',
+    name: 'Confirmation',
+    component: Confirmation,
+  },
+  {
+    path: '/RegistrationDone',
+    name: 'RegistrationDone',
+    component: RegistrationDone,
+  },
+  {
+    path: '/RegisterProfile',
+    name: 'RegisterProfile',
+    component: RegisterProfile,
+  },
+  {
+    path: '/',
+    name: 'FirstView',
+    component: FirstView,
+  },
+]
 
 const router = new VueRouter({
   mode: 'history',
