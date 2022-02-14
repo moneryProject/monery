@@ -1,7 +1,7 @@
 <template>
     <div class="notice">
         <header class="header">
-            <router-link to="./" class="header__link">
+            <router-link to="Home" class="header__link">
                 <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
             </router-link>
             <h1 class="header__heading">通知</h1>

@@ -1,6 +1,11 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <router-link to="Search" class="header__link">
+                <img src="../../assets/back-icon.svg" alt="戻るボタンアイコン">
+            </router-link>
+            <h1 class="header__heading">鹿とたくさん戯れようツアー！</h1>
+        </header> 
         <main class='plandetail'>
             <div class="plandetail__mainImg"></div>
             <div class="plandetail__text">
@@ -166,11 +171,9 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
 import GlobalNav from '@/components/GlobalNav'
 export default {
     components: {
-        Header,
         GlobalNav,
     },
 }
@@ -178,6 +181,7 @@ export default {
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+    @import "@/sass/header";
     .plandetail {
         width: 100vw;
         height: calc(100vh - 8.0rem);
@@ -186,6 +190,7 @@ export default {
         overflow-x: scroll;
         // background: tomato;
         padding: 0 0 8.0rem 0;
+        margin-top: 8.0rem;
         &__mainImg {
             width: 100%;
             height: 24.4rem;

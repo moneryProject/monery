@@ -1,6 +1,11 @@
 <template>
     <div>
-        <Header />
+        <header class="header">
+            <h1 class="header__heading"> 検索</h1>
+            <router-link to="Notice" class="header__link">
+                <img src="../assets/home/bell.svg" alt="">
+            </router-link>
+        </header>
         <main class='search'>
             <div class="search__input">
                 <input type="text" placeholder="キーワードを入力する">
@@ -21,7 +26,7 @@
             </div>
             <div class="search__plans">
                 <h2>おすすめプランから探す</h2>
-                <div class="search__plans__bigBox">
+                <router-link to="PlanDetail" class="search__plans__bigBox">
                     <div class="img"></div>
                     <p class="place">沖縄市（沖縄県）</p>
                     <h3 class="title">[カップル限定]珊瑚礁の綺麗な海を最安価で見れる！沖縄でしか見えない魚と戯れよう！</h3>
@@ -29,9 +34,9 @@
                         <div class="moneyBox__icon"></div>
                         <p class="moneyBox__money">15000円~</p>
                     </div>
-                </div>
+                </router-link>
                 <div class="search__plans__smallBox">
-                    <div class="search__plans__smallBox__content">
+                    <router-link to="PlanDetail" class="search__plans__smallBox__content">
                         <div class="img"></div>
                         <p class="place">福岡市（福岡県）</p>
                         <h3 class="title">福岡の名物！屋台でもつ鍋をたくさん食べよう！</h3>
@@ -39,7 +44,7 @@
                             <div class="moneyBox__icon"></div>
                             <p class="moneyBox__money">30000円~</p>
                         </div>
-                    </div>
+                    </router-link>
                     <div class="search__plans__smallBox__content">
                         <div class="img"></div>
                         <p class="place">福岡市（福岡県）</p>
@@ -93,11 +98,9 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
 import GlobalNav from '@/components/GlobalNav'
 export default {
     components: {
-        Header,
         GlobalNav,
     },
 }
@@ -105,6 +108,28 @@ export default {
 
 <style lang="scss" scoped>
     @import "@/sass/_vars";
+        .header{
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-bottom: 6px;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        &__heading{
+            color: $headerTextColor;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        &__link{
+            position: absolute;
+            bottom: 0;
+            right: 16px;
+        }
+    }
     .header {
         box-shadow: 0px 8px 16px -3px rgba(202, 202, 202, 0.25);
     }
@@ -115,6 +140,7 @@ export default {
         color: #4F4F4F;
         overflow-x: scroll;
         padding: 0 0 5.0rem 0;
+        margin-top: 8.0rem;
         &__input {
             position: relative;
             width: 34.3rem;
@@ -224,6 +250,7 @@ export default {
             &__bigBox {
                 width: 100%;
                 margin: 2.0rem 0 0 0;
+                text-decoration: none;
                 .img {
                     width: 100%;
                     height: 16.4rem;
@@ -271,6 +298,7 @@ export default {
                 &__content {
                     width: 16.4rem;
                     margin: 0 0 3.2rem 0;
+                    text-decoration: none;
                     .img {
                         width: 100%;
                         height: 16.4rem;
